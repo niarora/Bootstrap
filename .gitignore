@@ -210,3 +210,8 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+
+# Custom
+*.js.map
+/TypescriptApp/bower_components/**
+/TypescriptApp/app/**/*.js

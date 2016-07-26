@@ -3,8 +3,8 @@
         constructor($routeProvider: angular.route.IRouteProvider) {
             $routeProvider
                 .when("/", {
-                    templateUrl: "/app/posts/list.html",
-                    controller: "PostsCtrl as vm"
+                    templateUrl: "/app/posts/myView.html",
+                    controller: "MyViewCtrl as vm"
                 })
                 .when("/edit/:id", {
                     templateUrl: "/app/posts/edit.html",
@@ -19,6 +19,6 @@
     }
     Config.$inject = ['$routeProvider'];
 
-    var mainApp = angular.module('chsakellBlogApp', ['ngRoute']);
+    var mainApp = angular.module('chsakellBlogApp', ['ngRoute','kendo.directives']);
     mainApp.config(Config);
 }

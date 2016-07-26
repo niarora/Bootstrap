@@ -15,14 +15,18 @@
     <link rel="stylesheet" href="/.build/css/appStyles.css">
 
     <!-- endinject -->
+    <link rel="stylesheet" href="/Scripts/kendo/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="/Scripts/kendo/styles/kendo.common-bootstrap.min.css">
+    <link rel="stylesheet" href="/Scripts/kendo/styles/kendo.bootstrap.min.css">
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
 
     <!-- vendors:js -->
-
-
     <script src="/.build/vendors/vendors.js"></script>
-
-
     <!-- endinject -->
+
+    <script src="/Scripts/kendo/js/kendo.all.min.js"></script>
+    <script src="/Scripts/kendo/js/kendo.angular.min.js"></script>
 
     <!-- domain:js -->
 
@@ -61,28 +65,19 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#/add" class="active">Add Post<i class="fa fa-info-circle fa-fw pull-right"></i></a></li>
-                        <li><a href="http://wp.me/p3mRWu-Wj" target="_blank">About<i class="fa fa-info-circle fa-fw pull-right"></i></a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right" ng-if="userData.isUserLoggedIn">
-                        <li class="userinfo"><a href="#/">{{username}}<i class="fa fa-user fa-fw"></i></a></li>
-                    </ul>
-                    <a href="https://www.facebook.com/chsakells.blog" target="_blank" class="pull-right">
-                        <img src="https://chsakell.files.wordpress.com/2015/08/facebook.png" />
-                    </a>
-                    <a href="https://twitter.com/chsakellsBlog" target="_blank" class="pull-right">
-                        <img src="https://chsakell.files.wordpress.com/2015/08/twitter-small.png" />
+                    <a href="https://github.com/niarora/Bootstrap" target="_blank" class="pull-right">
+                        <img src="https://avatars2.githubusercontent.com/u/8689979?v=3&amp;u=0df1e4f360bf656ee02339d187a745d0d54a759e&amp;s=50">
                     </a>
                 </div>
             </div>
-
             <ng-view></ng-view>
         </div>
     </div>
     <footer class="navbar navbar-fixed-bottom">
         <div class="text-center">
             <h4 class="white">
-                <a href="http://chsakell.com/" target="_blank">chsakell's Blog</a>
-                <i>Anything around ASP.NET MVC,Web API, WCF, Entity Framework & C#</i>
+                <i>Bootstrapped SPA using AngularJS, TypeScript and Kendo UI.</i>
             </h4>
         </div>
     </footer>

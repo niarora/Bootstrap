@@ -1,14 +1,16 @@
 ﻿module app.common.services {
+    export class ConstantService {
+        private static baseUri = '/api';
 
-    interface IConstant {
         apiPostURI: string;
-    }
-
-    export class ConstantService implements IConstant {
-        apiPostURI: string;
+        uri: {
+            persons: string;
+        }
 
         constructor() {
-            this.apiPostURI = '/api/posts/';
+            this.uri = {
+                persons: ConstantService.baseUri + '/persons'
+            };
         }
     }
 

@@ -1,29 +1,29 @@
-﻿module app.postAdd {
+﻿module app.personAdd {
 
-    interface IAddPostViewModel {
-        post: app.domain.IPost;
+    interface IAddPersonViewModel {
+        person: app.domain.IPerson;
         add(): void;
     }
 
-    class PostAddCtrl implements IAddPostViewModel {
+    class PersonAddCtrl implements IAddPersonViewModel {
 
-        post: app.domain.IPost;
+        person: app.domain.IPerson;
 
-        static $inject = ['$location', 'constantService', 'dataService'];
+        static $inject = ['$location', 'constantService', 'personService'];
         constructor(private $location: ng.ILocationService,
             private constantService: app.common.services.ConstantService,
-            private dataService: app.common.services.DataService) {
+            private personService: app.common.services.PersonService) {
         }
 
 
         add(): void {
-            this.dataService.add(this.constantService.apiPostURI, this.post)
-                .then((result: app.domain.IPost) => {
-                    alert(result.Title + ' submitted successfully');
+            this.personService.add(this.person)
+                .then((result: app.domain.IPerson) => {
+                    alert(result.FirstName + ' added successfully');
                     this.$location.path('/');
                 });
         }
     }
     angular.module('chsakellBlogApp')
-        .controller('PostAddCtrl', PostAddCtrl);
+        .controller('PersonAddCtrl', PersonAddCtrl);
 }
